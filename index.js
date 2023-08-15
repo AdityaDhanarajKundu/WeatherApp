@@ -5,6 +5,7 @@ const windEl = document.querySelector(".wind");
 const inputEl = document.getElementById("input-city");
 const buttonEl = document.querySelector(".search button");
 const weatherIcon = document.querySelector(".weather-icon");
+const weatherBlock = document.querySelector(".weather");
 
 const apiKey = "b60fb16966d8bbb8d84562d84c6706d2";
 async function checkWeather(){
@@ -36,6 +37,8 @@ async function checkWeather(){
         else if(data.weather[0].main === "Mist"){
             weatherIcon.src="images/mist.png";
         }
+
+        weatherBlock.style.display = "block";
         
         console.log(data);
     }catch(error){
