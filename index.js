@@ -6,6 +6,7 @@ const inputEl = document.getElementById("input-city");
 const buttonEl = document.querySelector(".search button");
 const weatherIcon = document.querySelector(".weather-icon");
 const weatherBlock = document.querySelector(".weather");
+const errorEl = document.querySelector(".error");
 
 const apiKey = "b60fb16966d8bbb8d84562d84c6706d2";
 async function checkWeather(){
@@ -43,6 +44,7 @@ async function checkWeather(){
         console.log(data);
     }catch(error){
         console.error(error);
+        errorEl.style.display = "block";
     }
 }
 
