@@ -45,6 +45,8 @@ async function checkWeather(){
     }catch(error){
         console.error(error);
         errorEl.style.display = "block";
+        //hiding the weather block if it was already open
+        weatherBlock.style.display = "none";
     }
 }
 
